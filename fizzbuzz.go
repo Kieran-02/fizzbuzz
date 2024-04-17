@@ -6,20 +6,18 @@ import (
 )
 
 func main() {
-	sum := 1
-	for i := 0; i < 100; i++ {
+	for i := 1; i < 100; i++ {
 		checktext := ""
-		if sum%3 == 0 {
+		if i%3 == 0 {
 			checktext += "Fizz"
 		}
-		if sum%5 == 0 {
+		if i%5 == 0 {
 			checktext += "Buzz"
 		}
-		if sum%3 != 0 && sum%5 != 0 {
-			checktext += strconv.Itoa(sum)
+		if i%3 != 0 && i%5 != 0 {
+			checktext += strconv.Itoa(i)
 		}
 		fmt.Println(checktext)
-		sum += 1
 	}
 
 	fmt.Println("TaDa!")
